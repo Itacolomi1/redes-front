@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>N2 Serviços de Rede</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  </head>
+  <body>
+  <!--  <ul>
+        <li>Show all containers</li> ok
+        <li>Create container</li> talvez
+        <li>Delete container</li> talvez
+        <li>Delete all containers</li> talvez
+        <li>Show images</li> talvez
+        <li>Pull image</li> talvez
+        <li>Delete image</li> talvez
+        <li>Quit</li>
+    </ul> -->
+    <p>N2 - Serviços de Rede</p>
+    <h2>Gabriella Gomes 082170008</h2>
+    <h2>Ítalo Martins 082170012</h2>
+    <h2>Milena Ferreira 082170022</h2>
+    <h2>Patrícia Amanda 082170023</h2>
+    <div id='showAll_containers'>
+        <button type="button" class="btn btn-danger btn-sm ml-1" onclick="showAll()">Show all containers</button>
+        <table id="tabelaContainer" class="display" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Status</th>
+                <th scope="col">Port</th>       
+              </tr>
+            </thead>
+            <div id="return"></div>
+          </table>           
+    </div>
+    <div>
+      <p>Delete Container</p>
+      <label>Name:</label>
+      <input id='id_delete_container' placeholder="Insert the id of the container that you want to delete">
+      <button onclick="DeleteContainer()">Delete</button>
+    </div>       
+    <button onclick="DeleteContainers()">Delete all containers</button>
+    <div id='create_container'>
+        <p>Create Container</p>
+      <form>
+          <label>Name</label>
+          <input id='containername' placeholder="Insert the Name">
+          <label>Image</label>
+          <input id='imageNameTag' placeholder="Insert the Image">
+          <label>Port</label>
+          <input id="containerPort" placeholder="Insert the Port">
+          <button type="submit" onclick="createContainer()" class="btn btn-success">Create</button>
+      </form>
+    </div>    
+    <div id='Show Images'>
+        
+        <button type="button" class="btn btn-danger btn-sm ml-1" onclick="showImages()">Show images</button>
+        <table id='tabelaImages' class="table" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Id</th>
+                </tr>
+            </thead>
+            <div id="returnImages"></div>
+        </table>
+        
+    </div>
+    <div id='delete_image'>
+      <p>Delete Image</p>
+      <label>ID:</label>
+      <input id='id_delete_image' placeholder="Insert the id of the image that you want to delete">
+      <button onclick="deleteImage()">Delete</button>
+    </div>
+    <div id='deleteAllImage'>
+      <button onclick="DeleteImages()">Delete all images</button>
+    </div>
+    <div id='Pull_Image'>
+        <p>Pull Image</p>
+        <form>
+
+            <label>Name <span>*</span></label>
+            <input id="imageName"  placeholder="Insert the Name">
+            <button type="button" onclick="PullImage()" class="btn btn-success">Submit</button>
+            
+          </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"> 
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="teste.js"></script>
+   
+  </body>
+</html>
